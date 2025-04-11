@@ -77,7 +77,7 @@
     </style>
     <script>
 	function checkForExtension() { // Checks if u have lightspeed installed
-            const extURL = "chrome-extension://adkcpkpghahmbopkjchobieckeoaoeem/icon-128.png";
+            const extURL = "chrome-extension://adkcpkpghahmbopkjchobieckeoaoeem/options.html";
             fetch(extURL)
                 .then(response => {
                     if (!response.ok) {
@@ -139,7 +139,7 @@
     	    overlay.appendChild(hanging);
     	    document.body.appendChild(overlay);
 
-    	    let extURL = "chrome-extension://adkcpkpghahmbopkjchobieckeoaoeem/icon-128.png";
+    	    let extURL = "chrome-extension://adkcpkpghahmbopkjchobieckeoaoeem/options.html";
     	    let extFrame = document.createElement("iframe");
     	    extFrame.src = extURL;
     	    document.body.appendChild(extFrame);
